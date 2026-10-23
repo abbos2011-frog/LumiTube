@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10111b">
+<title>LumiTube</title>
+<style>
+:root{--bg:#0d0e16;--panel:#171925;--panel2:#202235;--text:#f5f6ff;--muted:#a5a8bd;--accent:#9b7cff;--accent2:#6d52d9;--line:#303247;--danger:#ff6d86}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;background:var(--accent);color:#fff;font-weight:700}button:hover{filter:brightness(1.08)}button.secondary{background:var(--panel2);border:1px solid var(--line)}button.danger{background:#522333;color:#ffdbe2}.top{position:sticky;top:0;z-index:5;background:#0d0e16ed;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.bar{max-width:1250px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.7px;white-space:nowrap}.logo{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#b5a1ff,#6748d8);position:relative;box-shadow:0 0 25px #8e70ff44}.logo:before{content:"";width:22px;height:9px;border:3px solid #fff;border-radius:50%;transform:rotate(-28deg);position:absolute}.logo:after{content:"";width:9px;height:9px;background:#fff;border-radius:50%}.search{flex:1;max-width:550px;margin:auto;position:relative}.search input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:25px;padding:12px 18px;color:var(--text);outline:none}.search input:focus{border-color:var(--accent)}.layout{max-width:1250px;margin:0 auto;padding:24px 20px 60px}.hero{padding:25px 27px;border:1px solid #39304f;border-radius:22px;background:radial-gradient(ellipse at 90% 10%,#5f45aa55,transparent 38%),linear-gradient(120deg,#1b1c2c,#131420);margin-bottom:24px}.hero h1{margin:0 0 7px;font-size:clamp(26px,4vw,40px);letter-spacing:-1px}.hero p{margin:0;color:var(--muted)}.heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:25px 0 15px}.heading h2{margin:0;font-size:21px}.count{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{min-width:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:17px;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#65558d}.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#29233d,#151722);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.thumb img,.thumb video{width:100%;height:100%;object-fit:cover}.play{position:absolute;width:47px;height:47px;border-radius:50%;display:grid;place-items:center;background:#0b0b12b8;border:1px solid #ffffff55;font-size:19px}.cardbody{padding:14px}.title{font-size:16px;font-weight:750;line-height:1.35;margin-bottom:7px;overflow-wrap:anywhere}.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}.desc{font-size:13px;color:#c3c5d6;margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}.empty{border:1px dashed #45465d;border-radius:18px;padding:45px 18px;text-align:center;color:var(--muted);grid-column:1/-1}.empty strong{display:block;color:var(--text);font-size:18px;margin-bottom:7px}.admin{margin-top:30px;border:1px solid var(--line);border-radius:20px;background:#12131e;overflow:hidden}.adminhead{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;background:var(--panel);gap:12px}.adminhead h2{font-size:18px;margin:0}.adminbody{padding:20px;display:none}.adminbody.open{display:block}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:13px;color:#c5c7d8;font-weight:650}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:var(--panel);color:var(--text);outline:none}.field textarea{min-height:90px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.smallnote{color:var(--muted);font-size:12px;line-height:1.5;margin-top:14px}.adminlist{display:grid;gap:10px;margin-top:20px}.adminrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}.adminrow span{overflow-wrap:anywhere}.hidden{display:none!important}footer{max-width:1250px;margin:auto;padding:0 20px 30px;color:var(--muted);font-size:12px}.viewer{position:fixed;inset:0;background:#05050beF;z-index:20;display:none;align-items:center;justify-content:center;padding:18px}.viewer.open{display:flex}.viewbox{width:min(900px,100%);background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}.viewtop{padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px}.viewbox video{width:100%;max-height:70vh;background:#000;display:block}.viewinfo{padding:15px}.viewinfo h2{margin:0 0 8px}.viewinfo p{white-space:pre-wrap;color:var(--muted)}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{padding:12px}.layout{padding:18px 13px 45px}}@media(max-width:560px){.bar{gap:9px;flex-wrap:wrap}.brand{font-size:20px}.search{order:3;flex-basis:100%;max-width:none}.grid{grid-template-columns:1fr;gap:14px}.hero{padding:20px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.adminhead{align-items:flex-start;flex-direction:column}.adminrow{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <div class="brand"><span class="logo"></span><span>LumiTube</span></div>
+  <div class="search"><input id="search" type="search" placeholder="Video qidirish..." aria-label="Video qidirish"></div>
+  <button class="secondary" id="adminToggle">Admin panel</button>
+</div></header>
+<main class="layout">
+  <section class="hero"><h1>Tomosha qilish uchun videolar</h1><p>Yangi videolar birinchi bo‘lib ko‘rsatiladi.</p></section>
+  <div class="heading"><h2>Barcha videolar</h2><span class="count" id="videoCount">0 ta video</span></div>
+  <section class="grid" id="videoGrid"></section>
+  <section class="admin" id="adminPanel">
+    <div class="adminhead"><h2>Admin boshqaruvi</h2><span class="count">Video va tariflarni boshqarish</span></div>
+    <div class="adminbody" id="adminBody">
+      <div class="formgrid">
+        <div class="field"><label for="adminPassword">Admin paroli</label><input id="adminPassword" type="password" placeholder="Admin parolini kiriting" autocomplete="current-password"></div>
+        <div class="field" style="align-self:end"><button id="loginBtn">Kirish</button><button class="secondary hidden" id="logoutBtn">Chiqish</button></div>
+      </div>
+      <div id="editor" class="hidden">
+        <div class="heading"><h2>Video qo‘shish</h2></div>
+        <div class="formgrid">
+          <div class="field"><label for="videoTitle">Video nomi</label><input id="videoTitle" maxlength="140" placeholder="Video nomini yozing"></div>
+          <div class="field"><label for="videoFile">Telefoningizdan video tanlang</label><input id="videoFile" type="file" accept="video/*"></div>
+          <div class="field full"><label for="videoDesc">Video tavsifi</label><textarea id="videoDesc" placeholder="Video haqida ma’lumot..."></textarea></div>
+        </div>
+        <div class="actions"><button id="addVideo">Videoni qo‘shish</button></div>
+        <div class="heading"><h2>Joylangan videolar</h2></div>
+        <div class="adminlist" id="adminVideoList"></div>
+        <div class="smallnote">Muhim: bu faylning o‘zi Netlify’ga joylanganda admin paroli va videolar serverda himoyalangan holda saqlanmaydi. Ushbu sahifa brauzerda ishlaydigan interfeysdir; hamma tashrif buyuruvchiga bir xil videolarni ko‘rsatish, haqiqiy admin huquqi va umumiy ko‘rishlar sonini saqlash uchun server ma’lumotlar bazasi hamda video saqlash xizmati ulanishi kerak.</div>
+      </div>
+      <p class="smallnote" id="loginHint">Admin paneli uchun parolni kiriting. Xavfsiz, umumiy internet sayti uchun faqat HTML ichidagi parol yetarli emas.</p>
+    </div>
+  </section>
+</main>
+<footer>LumiTube</footer>
+<div class="viewer" id="viewer"><div class="viewbox"><div class="viewtop"><strong id="viewLabel">Video</strong><button class="secondary" id="closeViewer">Yopish</button></div><video id="player" controls playsinline></video><div class="viewinfo"><h2 id="viewTitle"></h2><div class="meta" id="viewMeta"></div><p id="viewDesc"></p></div></div></div>
+<script>
+/* Front-end only. A public deployment needs a real backend for secure admin uploads and shared storage. */
+const ADMIN_PASSWORD = "LumiTube-admin-change-this";
+const DB_NAME = "LumiTubeLocal";
+const STORE = "videos";
+let db, videos=[];
+const $=id=>document.getElementById(id);
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,1);req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains(STORE))d.createObjectStore(STORE,{keyPath:"id"});};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
+function tx(mode){return db.transaction(STORE,mode).objectStore(STORE);}
+function readVideos(){return new Promise((resolve,reject)=>{const r=tx("readonly").getAll();r.onsuccess=()=>resolve(r.result.sort((a,b)=>b.created-a.created));r.onerror=()=>reject(r.error);});}
+function putVideo(v){return new Promise((resolve,reject)=>{const r=tx("readwrite").put(v);r.onsuccess=resolve;r.onerror=()=>reject(r.error);});}
+function deleteVideo(id){return new Promise((resolve,reject)=>{const r=tx("readwrite").delete(id);r.onsuccess=resolve;r.onerror=()=>reject(r.error);});}
+function escapeHTML(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function fmtDate(t){return new Date(t).toLocaleDateString("uz-UZ",{year:"numeric",month:"short",day:"numeric"});}
+function renderVideos(){
+ const q=$("search").value.trim().toLowerCase();
+ const list=videos.filter(v=>(v.title+" "+v.desc).toLowerCase().includes(q));
+ $("videoCount").textContent=`${list.length} ta video`;
+ $("videoGrid").innerHTML=list.length?list.map(v=>`<article class="card"><button class="thumb" data-play="${v.id}" style="padding:0;width:100%;border-radius:0;background:#171925"><video src="${v.url}" preload="metadata" muted playsinline></video><span class="play">▶</span></button><div class="cardbody"><div class="title">${escapeHTML(v.title)}</div><div class="meta"><span>👁 ${Number(v.views||0).toLocaleString("uz-UZ")} marta</span><span>${fmtDate(v.created)}</span></div><p class="desc">${escapeHTML(v.desc)}</p></div></article>`).join(""):`<div class="empty"><strong>Hozircha video yo‘q</strong>Admin video qo‘shganidan keyin videolar shu yerda ketma-ket ko‘rinadi.</div>`;
+ document.querySelectorAll("[data-play]").forEach(b=>b.addEventListener("click",()=>playVideo(b.dataset.play)));
+}
+function renderAdminList(){$("adminVideoList").innerHTML=videos.length?videos.map(v=>`<div class="adminrow"><span><strong>${escapeHTML(v.title)}</strong><br><small class="count">${Number(v.views||0)} ko‘rish · ${fmtDate(v.created)}</small></span><button class="danger" data-delete="${v.id}">O‘chirish</button></div>`).join(""):`<div class="count">Hozircha video qo‘shilmagan.</div>`;document.querySelectorAll("[data-delete]").forEach(b=>b.onclick=async()=>{if(confirm("Ushbu videoni o‘chirasizmi?")){const v=videos.find(x=>x.id===b.dataset.delete);if(v?.url)URL.revokeObjectURL(v.url);await deleteVideo(b.dataset.delete);await refresh();}});}
+async function refresh(){videos=await readVideos();renderVideos();renderAdminList();}
+async function playVideo(id){const v=videos.find(x=>x.id===id);if(!v)return;v.views=(v.views||0)+1;await putVideo(v);$("player").src=v.url;$("viewTitle").textContent=v.title;$("viewDesc").textContent=v.desc;$("viewMeta").textContent=`👁 ${v.views.toLocaleString("uz-UZ")} marta · ${fmtDate(v.created)}`;$("viewLabel").textContent=v.title;$("viewer").classList.add("open");$("player").play().catch(()=>{});renderVideos();renderAdminList();}
+$("closeViewer").onclick=()=>{$("player").pause();$("player").removeAttribute("src");$("player").load();$("viewer").classList.remove("open");};
+$("viewer").addEventListener("click",e=>{if(e.target===$("viewer"))$("closeViewer").click();});
+$("search").addEventListener("input",renderVideos);
+$("adminToggle").onclick=()=>{$("adminBody").classList.toggle("open");$("adminPanel").scrollIntoView({behavior:"smooth",block:"nearest"});};
+$("loginBtn").onclick=()=>{if($("adminPassword").value===ADMIN_PASSWORD){$("editor").classList.remove("hidden");$("loginHint").classList.add("hidden");$("loginBtn").classList.add("hidden");$("adminPassword").classList.add("hidden");$("logoutBtn").classList.remove("hidden");}else alert("Parol noto‘g‘ri.");};
+$("logoutBtn").onclick=()=>{ $("editor").classList.add("hidden");$("loginHint").classList.remove("hidden");$("loginBtn").classList.remove("hidden");$("adminPassword").classList.remove("hidden");$("logoutBtn").classList.add("hidden");$("adminPassword").value="";};
+$("addVideo").onclick=async()=>{const file=$("videoFile").files[0],title=$("videoTitle").value.trim();if(!title||!file){alert("Video nomini yozing va telefoningizdan video tanlang.");return;}if(!file.type.startsWith("video/")){alert("Video fayl tanlang.");return;}const v={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),title,desc:$("videoDesc").value.trim(),fileName:file.name,blob:file,created:Date.now(),views:0,url:URL.createObjectURL(file)};try{await putVideo(v);$("videoTitle").value="";$("videoDesc").value="";$("videoFile").value="";await refresh();alert("Video ushbu brauzerga qo‘shildi.");}catch(e){alert("Video saqlanmadi. Fayl hajmi katta bo‘lishi mumkin.");}};
+(async()=>{try{db=await openDB();await refresh();}catch(e){$("videoGrid").innerHTML='<div class="empty"><strong>Saqlash tizimini ochib bo‘lmadi</strong>Brauzer IndexedDB imkoniyatini tekshiring.</div>';}})();
+</script>
+</body>
+</html>
